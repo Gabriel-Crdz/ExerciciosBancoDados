@@ -1,4 +1,9 @@
-/* Usando o mesmo banco da atv1 */
+/* Usando o mesmo banco da atv1 
+
+CREATE DATABASE lojaif;
+\c lojaif
+
+*/
 
 CREATE TABLE produto(id_prod SERIAL PRIMARY KEY, descricao VARCHAR(255) NOT NULL, preco DECIMAL(12, 2), estoque INT); 
 
