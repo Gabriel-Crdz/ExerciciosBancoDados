@@ -1,0 +1,11 @@
+Exercício de Modelagem
+
+A Escola Primária Caminho do Saber deseja organizar melhor suas informações acadêmicas e administrativas. Atualmente, os registros são feitos em planilhas e papéis, o que causa erros e dificuldades de controle.
+
+Na escola, existem várias turmas, cada uma identificada por ano e letra (por exemplo: 1ºA, 2ºB). Cada aluno possui um número de matrícula único e informações pessoais como nome, data de nascimento e endereço. Os alunos pertencem a apenas uma turma por ano letivo.
+
+Cada professor pode lecionar em mais de uma turma e é responsável por diferentes disciplinas (como Matemática, Português e Ciências). Para cada disciplina, é necessário registrar as notas dos alunos ao longo do ano e também as faltas.
+
+Além disso, a escola precisa controlar os responsáveis pelos alunos (pai, mãe ou tutor). Um responsável pode ter mais de um filho matriculado, e cada aluno pode ter mais de um responsável. É importante registrar dados de contato, como telefone e e-mail.
+
+Por fim, a escola deseja manter um histórico de cada aluno, incluindo as turmas em que estudou nos anos anteriores, suas notas e frequência.
