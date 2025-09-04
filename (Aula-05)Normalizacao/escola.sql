@@ -15,8 +15,6 @@ CREATE TABLE professor(
  nome VARCHAR(80) NOT NULL  
 );
 
-
-
 CREATE TABLE aluno( 
  id_aluno SERIAL PRIMARY KEY ,  
  nome VARCHAR(80) NOT NULL,  
