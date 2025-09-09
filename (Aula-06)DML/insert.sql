@@ -1,6 +1,6 @@
 /* Usando o Banco de dados da aula anterior */
-
 -- Inserindo as disciplinas
+
 INSERT INTO disciplina(nome) VALUES('MATEMATICA');
 INSERT INTO disciplina(nome) VALUES('CIÊNCIAS');
 INSERT INTO disciplina(nome) VALUES('GEOGRAFIA');
