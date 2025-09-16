@@ -19,24 +19,24 @@ JOIN modelo USING (id_modelo)
 JOIN marca USING (id_marca);
 
 -- 3. Quantidade de veículos vendidos por marca.
-SELECT 
-    count(id_marca)
-FROM venda
-JOIN veiculo USING (id_veiculo)
-JOIN modelo USING (id_modelo)
-JOIN marca USING (id_marca)
 
 -- 4. Valor total vendido por corretor, mostrando apenas quem vendeu mais de 100.000.
-SELECT * FROM
+SELECT  
+FROM venda
 
 -- 5. Valor médio por marca, do maior para o menor.
 SELECT * FROM
 
 -- 6. Corretores com número de vendas (apenas quem tem pelo menos 3 vendas).
-SELECT * FROM
+SELECT * 
+FROM venda
+JOIN corretor USING (id_corretor)
+WHERE;
 
--- 7. Compradores que já realizaram compra acima de 80.000.
-SELECT * FROM
+-- 7. Compradores que já realizaram compra acima de 80000
+SELECT nome_compr FROM venda
+JOIN comprador USING (id_compr)
+WHERE valor_venda > 80000;
 
 -- 8. Quantidade de vendas por mês (ano-mês), do mais recente ao mais antigo.
 SELECT * FROM
