@@ -45,7 +45,7 @@ CREATE TABLE venda(
  valor_venda FLOAT NOT NULL,  
  data_venda DATE NOT NULL,  
  comissao_corretor FLOAT NOT NULL,
- id_comprador INT NOT NULL REFERENCES comprador(id_compr), -- FK
+ id_compr INT NOT NULL REFERENCES comprador(id_compr), -- FK
  id_corretor INT NOT NULL REFERENCES corretor(id_corretor),  -- FK
  id_veiculo INT NOT NULL REFERENCES veiculo(id_veiculo) -- FK
 ); 
