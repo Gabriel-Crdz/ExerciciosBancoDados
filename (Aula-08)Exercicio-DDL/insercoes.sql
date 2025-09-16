@@ -53,7 +53,7 @@ VALUES
     ('5UXWX7C5X0L123456', 'STR9633', 'Cinza', '2013-04-01', 5000, 7),
     ('1FADP3F2XGL123789', 'XYZ4321', 'Branco', '2012-07-30', 10000, 8);
 
-INSERT INTO venda(valor_venda, data_venda, comissao_corretor, id_comprador, id_corretor, id_veiculo) 
+INSERT INTO venda(valor_venda, data_venda, comissao_corretor, id_compr, id_corretor, id_veiculo) 
 VALUES
     (50000.05, '2023-08-01', 5000.55, 1, 1, 1),
     (35000.40, '2014-08-05', 3500.89, 2, 2, 2),
