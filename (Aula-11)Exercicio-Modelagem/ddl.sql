@@ -57,4 +57,3 @@ CREATE TABLE pokemon_tipagem(
  id_pokemon INT NOT NULL REFERENCES pokemon(id_pokemon), -- FK
  id_tipo INT NOT NULL REFERENCES tipagem(id_tipo) -- FK
 ); 
-
