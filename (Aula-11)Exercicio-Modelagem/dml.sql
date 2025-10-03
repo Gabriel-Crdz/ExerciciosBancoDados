@@ -26,6 +26,18 @@ INSERT INTO treinador (nome, idade, cidade_origem, contato) VALUES
 ('Gabriel Garcia Marquez', 87, 'Aracataca', '5417042014'),
 ('Yoshihiro Togashi', 59, 'Shinjo', '7127041966');
 
+INSERT INTO batalha_treinador (id_batalha, id_treinador) VALUES
+(1,1),(1,2),
+(2,3),(2,4),
+(3,5),(3,6),
+(4,7),(4,8),
+(5,9),(5,10),
+(6,11),(6,12),
+(7,1),(7,3),
+(8,2),(8,5),
+(9,4),(9,6),
+(10,7),(10,12);
+
 -- Tipagens
 INSERT INTO tipagem (nome) VALUES
 ('Fogo'),('Água'),('Planta'),('Elétrico'),
@@ -60,7 +72,7 @@ INSERT INTO pokemon_tipagem (id_pokemon,id_tipo) VALUES
 (5,9),(5,8),       -- Mimikyu Fantasma + Fada
 (6,9),             -- Banette Fantasma
 (7,15),(7,9),      -- Shedinja Inseto + Fantasma
-(8,7),             -- Sableye Sombrio
+(8,7),(8,9),       -- Sableye Sombrio + Fantasma
 (9,9),(9,1);       -- Chandelure Fantasma + Fogo
 
 -- Clarice Lispector (4)
@@ -126,10 +138,9 @@ INSERT INTO pokemon_tipagem (id_pokemon,id_tipo) VALUES
 (27,15),(27,10),   -- Scizor Inseto + Aço
 (28,12),(28,10);   -- Lucario Lutador + Aço
 
-
 -- Stephen King (5)
 INSERT INTO pokemon (num_pokedex,nome,altura,peso,sexo,level,id_treinador) VALUES
-(94,'Gengar',1.5,40.5,'M',55,),
+(94,'Gengar',1.5,40.5,'M',55,8),
 (778,'Mimikyu',0.2,0.7,'F',52,8),
 (609,'Chandelure',1.0,34.3,'M',56,8),
 (248,'Tyranitar',2.0,202.0,'M',60,8),
@@ -141,7 +152,6 @@ INSERT INTO pokemon_tipagem (id_pokemon,id_tipo) VALUES
 (31,9),(31,1),     -- Chandelure Fantasma + Fogo
 (32,17),(32,7),    -- Tyranitar Pedra + Sombrio
 (33,6),(33,7);     -- Hydreigon Dragão + Sombrio
-
 
 -- Conceição Evaristo (4)
 INSERT INTO pokemon (num_pokedex,nome,altura,peso,sexo,level,id_treinador) VALUES
@@ -196,3 +206,56 @@ INSERT INTO pokemon_tipagem (id_pokemon,id_tipo) VALUES
 (48,6),(48,18),    -- Garchomp Dragão + Terra
 (49,12),(49,10),   -- Lucario Lutador + Aço
 (50,2),(50,5);     -- Starmie Água + Psíquico
+
+-- Estatisticas
+INSERT INTO estatistica(pontos_saude,ataque,defesa,ataque_especial,defesa_especial,velocidade,id_pokemon) VALUES
+(60,65,60,130,75,110,1),   -- Gengar
+(100,134,110,95,100,61,2), -- Tyranitar
+(130,85,80,85,95,60,3),    -- Lapras
+(91,134,95,100,100,80,4),  -- Dragonite
+(55,90,80,50,105,96,5),    -- Mimikyu
+(64,115,65,83,63,65,6),    -- Banette
+(1,90,45,30,30,40,7),      -- Shedinja
+(50,75,75,65,65,50,8),     -- Sableye
+(60,55,90,145,90,80,9),    -- Chandelure
+(68,65,65,125,115,80,10),  -- Gardevoir
+(95,65,65,110,130,60,11),  -- Sylveon
+(65,65,60,130,95,110,12),  -- Espeon
+(60,60,60,105,105,105,13), -- Mismagius
+(35,55,40,50,50,90,14),    -- Pikachu
+(80,120,70,110,70,80,15),  -- Blaziken
+(75,90,50,110,80,95,16),   -- Houndoom
+(48,48,48,48,48,48,17),    -- Ditto
+(1,90,45,30,30,40,18),     -- Shedinja
+(55,90,80,50,105,96,19),   -- Mimikyu
+(60,65,60,130,75,110,20),  -- Gengar
+(78,84,78,109,85,100,21),  -- Charizard
+(55,50,45,135,95,120,22),  -- Alakazam
+(95,125,79,60,100,81,23),  -- Gyarados
+(73,76,75,81,100,100,24),  -- Ninetales
+(60,105,60,120,60,105,25), -- Zoroark
+(68,65,65,125,115,80,26),  -- Gardevoir
+(70,130,100,55,80,65,27),  -- Scizor
+(70,110,70,115,70,90,28),  -- Lucario
+(60,65,60,130,75,110,29),  -- Gengar
+(55,90,80,50,105,96,30),   -- Mimikyu
+(60,55,90,145,90,80,31),   -- Chandelure
+(100,134,110,95,100,61,32),-- Tyranitar
+(92,105,90,125,90,98,33),  -- Hydreigon
+(95,60,79,100,125,81,34),  -- Milotic
+(70,110,70,115,70,90,35),  -- Lucario
+(80,120,70,110,70,80,36),  -- Blaziken
+(95,65,110,60,130,65,37),  -- Umbreon
+(91,134,95,100,100,80,38), -- Dragonite
+(60,50,150,50,150,60,39),  -- Aegislash (forma escudo)
+(95,60,79,100,125,81,40),  -- Milotic
+(95,65,65,110,130,60,41),  -- Sylveon
+(130,85,80,85,95,60,42),   -- Lapras
+(68,65,65,125,115,80,43),  -- Gardevoir
+(105,150,90,150,90,95,44), -- Rayquaza
+(68,125,65,65,115,80,45),  -- Gallade
+(78,84,78,109,85,100,46),  -- Charizard
+(72,95,67,103,71,122,47),  -- Greninja
+(108,130,95,80,85,102,48), -- Garchomp
+(70,110,70,115,70,90,49),  -- Lucario
+(60,75,85,100,85,115,50);  -- Starmie
