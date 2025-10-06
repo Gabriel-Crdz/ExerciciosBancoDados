@@ -38,7 +38,7 @@ CREATE TABLE pokemon(
 );
 
 CREATE TABLE estatistica( 
- id_estatic SERIAL PRIMARY KEY,  
+ id_estatistica SERIAL PRIMARY KEY,  
  pontos_saude INT NOT NULL,  
  ataque INT NOT NULL,  
  defesa INT NOT NULL,  
