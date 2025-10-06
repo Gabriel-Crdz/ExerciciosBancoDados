@@ -34,5 +34,22 @@ GROUP BY pokemon.id_pokemon, estatistica.id_estatistica
 ORDER BY BST ASC;
 
 -- 4. Todos os treinadores que possuem pokémons de apenas uma tipagem.
+SELECT
+    treinador.id_treinador,
+    treinador.nome AS treinador,
+    pokemon.id_pokemon,
+    pokemon.nome AS pokemon,
+    tipagem.nome AS tipo
+FROM pokemon
+JOIN treinador USING (id_treinador)
+JOIN pokemon_tipagem USING (id_pokemon)
+JOIN tipagem USING (id_tipo)
+WHERE pokemon.id_pokemon IN (
+    SELECT id_pokemon
+    FROM pokemon_tipagem
+    GROUP BY id_pokemon
+    HAVING COUNT(id_tipo) = 1
+)
+ORDER BY treinador.id_treinador ASC;
 
 -- 5. 
