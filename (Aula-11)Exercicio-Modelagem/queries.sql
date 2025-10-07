@@ -5,7 +5,7 @@ SELECT * FROM pokemon
 WHERE num_pokedex < 151
 ORDER BY num_pokedex ASC;
 
--- 2. Todos os treinadores que possuem pokémons acima do nível 60.
+-- 2. Todos os dados dos treinadores que possuem pokémons acima do nível 60.
 SELECT 
     treinador.id_treinador,
     pokemon.id_pokemon,
@@ -22,12 +22,12 @@ GROUP BY treinador.id_treinador, pokemon.id_pokemon
 HAVING pokemon.level >= 60
 ORDER BY treinador.id_treinador ASC;
 
--- 3. A soma das estatísticas de cada pokémon cadastrado.
+-- 3. A soma das estatísticas(BST: Base Stats Total) de cada pokémon cadastrado.
 SELECT
     pokemon.id_pokemon,
     pokemon.nome,
     pokemon.num_pokedex,
-    pontos_saude + ataque + defesa + ataque_especial + defesa_especial + velocidade AS BST --BST: Base Stats Total
+    pontos_saude + ataque + defesa + ataque_especial + defesa_especial + velocidade AS BST 
 FROM estatistica
 JOIN pokemon USING (id_pokemon)
 GROUP BY pokemon.id_pokemon, estatistica.id_estatistica
@@ -37,6 +37,7 @@ ORDER BY BST ASC;
 SELECT
     treinador.id_treinador,
     treinador.nome AS treinador,
+    treinador.contato,
     pokemon.id_pokemon,
     pokemon.nome AS pokemon,
     tipagem.nome AS tipo
@@ -52,4 +53,15 @@ WHERE pokemon.id_pokemon IN (
 )
 ORDER BY treinador.id_treinador ASC;
 
--- 5. 
+-- 5. Todos os treinadores que participaram do torneio de Tokyo.
+SELECT
+    treinador.id_treinador,
+    treinador.nome,
+    treinador.contato
+FROM treinador
+JOIN batalha_treinador USING (id_treinador)
+JOIN batalha USING (id_batalha)
+JOIN torneio USING (id_torneio)
+GROUP BY treinador.id_treinador, torneio.id_torneio
+HAVING torneio.local ILIKE 'tokyo'
+ORDER BY treinador.id_treinador;
